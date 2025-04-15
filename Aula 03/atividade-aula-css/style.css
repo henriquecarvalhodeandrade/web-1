@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+body {
+    background-color: aliceblue;
+    padding: 10px;
+    margin: 5px;
+    background-image: url(img/HD-wallpaper-anime-anime-girls-digital-art-artwork-portrait-display-vertical-2d.jpg);
+}
+
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+#animacao {
+    background-color: rgb(108, 238, 115);
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    animation: aparecer 4s ease-out infinite;
+}
+
+.secoesprincipais {
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 10px
+}
+
+header {
+    background-color: rgb(253, 173, 222);  
+}
+
+main {
+    background-color: rgb(167, 231, 250);
+}
+
+footer {
+    background-color: rgb(158, 252, 213);
+}

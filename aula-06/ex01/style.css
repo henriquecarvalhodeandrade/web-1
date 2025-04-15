@@ -1,0 +1,32 @@
+* {
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.col1 {
+    float: left;
+    width: 50%;
+    padding: 40px;
+    background-color: aqua;
+}
+
+.col2 {
+    float: left;
+    width: 50%;
+    padding: 40px;
+    background-color: rgb(234, 255, 0);
+}
+
+.col3 {
+    float: left;
+    width: 50%;
+    padding: 40px;
+    background-color: rgb(255, 0, 204);
+}
+
+.col4 {
+    float: left;
+    width: 50%;
+    padding: 40px;
+    background-color: rgb(68, 255, 0);
+}

@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    margin: 20px;
+}
+
+header h2 {
+    margin: 10px 0px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    background-color: aquamarine;
+}
+
+section {
+    margin: 10px;
+    background-color: aliceblue;
+    text-align: justify;
+    flex: 1;
+}
+
+section h2 {
+    margin: 10px;
+}
+
+section p {
+    margin: 10px;
+}
+
+footer {
+    margin: 20px;
+    text-align: center;
+}
