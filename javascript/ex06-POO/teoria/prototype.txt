@@ -1,0 +1,12 @@
+A estrutura de Prototype (protótipo) é o coração do mecanismo de herança e compartilhamento de propriedades em JavaScript. É um conceito fundamental e um pouco diferente da herança baseada em classes que você pode encontrar em linguagens como Java ou C#.
+
+O que é um Protótipo?
+    Todo objeto em JavaScript tem um link interno para outro objeto, chamado seu prototype. Esse objeto protótipo, por sua vez, também tem seu próprio protótipo, e assim por diante, até que um objeto seja alcançado com null como seu protótipo. Essa sequência de objetos ligados é conhecida como cadeia de protótipos (prototype chain).
+    Quando você tenta acessar uma propriedade ou método em um objeto, o JavaScript primeiro verifica se o próprio objeto possui essa propriedade/método.
+    Se não encontrar, ele sobe na cadeia de protótipos, verificando o protótipo do objeto.
+    Esse processo continua até que a propriedade/método seja encontrado ou até que o final da cadeia (onde o protótipo é null) seja alcançado. Se não for encontrado, o resultado é undefined para propriedades ou um erro se você tentar chamar um método inexistente.
+
+A Propriedade prototype das Funções (Construtoras)
+    - Este é um ponto crucial que muitas vezes causa confusão:
+        Funções em JavaScript (todas elas, mas especialmente as funções construtoras usadas com new) têm uma propriedade especial chamada prototype.
+        Importante: Esta propriedade prototype da função não é o protótipo da função em si. Em vez disso, o valor dessa propriedade prototype é o objeto que será atribuído como o protótipo de todas as instâncias (objetos) criadas por essa função construtora quando você usa a palavra-chave new.

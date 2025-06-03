@@ -1,0 +1,19 @@
+A seguir, uma lista de algumas palavras reservadas do JavaScript:
+
+    break -> Finaliza um switch ou um laço
+
+    continue -> Interrompe uma iteração e reinicia da condição do laço
+
+    do ... while -> Executa um bloco de instruções e o repete enquanto a condição é verdadeira
+
+    for -> Executa um bloco de instruções e o repete enquanto a condição é verdadeira
+
+    function -> Declara uma função
+
+    if ... else -> Executa um conjunto de instruções dependendo de uma condição
+
+    return -> Sai de uma função e retorna um valor
+
+    try ... catch -> Implementa tratamento de exceções
+
+    var -> Declara uma variável

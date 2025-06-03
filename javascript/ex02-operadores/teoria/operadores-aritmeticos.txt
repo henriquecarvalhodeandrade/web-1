@@ -1,0 +1,17 @@
+A seguir, são apresentados alguns operadores aritméticos:
+
+    +  ->  Adição
+
+    -  ->  Subtração
+
+    *  ->  Multiplicação
+
+    **  ->  Exponenciação
+
+    /  ->  Divisão
+
+    %  ->  Módulo (resto)
+
+    ++  ->  Incremento
+
+    --  ->  Decremento

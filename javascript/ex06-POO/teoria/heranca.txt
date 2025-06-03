@@ -1,0 +1,22 @@
+Herança
+Em diversas situações, precisamos especializar uma classe. Considerando o exemplo da sessão anterior poderíamos especializar a classe Animal em subclasses de animais: gato, cachorro, coelho, etc., em que cada uma possui seus atributos e métodos particulares. Essa especialização é chamada de extensão em diversas linguagens de programação, e no JavaScript é feita com a palavra reservada extends.
+
+Resumidamente, Herança na programação é um mecanismo onde uma nova classe (filha ou subclasse) "herda" (recebe automaticamente) características (atributos) e comportamentos (métodos) de uma classe já existente (pai ou superclasse).
+
+Resumidamente, Herança na programação é um mecanismo onde uma nova classe (filha ou subclasse) "herda" (recebe automaticamente) características (atributos) e comportamentos (métodos) de uma classe já existente (pai ou superclasse).
+
+
+Para que serve?
+
+    - Reutilização de Código: 
+        Evita ter que reescrever o mesmo código em múltiplas classes. Funcionalidades comuns ficam na classe pai.
+
+    - Organização: 
+        Cria uma hierarquia lógica entre classes (ex: Carro e Motocicleta são tipos de Veiculo).
+
+    - Especialização: 
+        A classe filha pode adicionar seus próprios atributos e métodos específicos, ou modificar (sobrescrever) os comportamentos herdados para se adequar às suas necessidades.
+
+
+Como funciona (de forma geral):
+    A subclasse tem acesso ao que foi definido na superclasse e pode estendê-la. Em JavaScript, isso é implementado através da cadeia de protótipos, mesmo quando se usa a sintaxe de class.

@@ -1,0 +1,5 @@
+A seguir, uma lista de operadores de tipo:
+
+ Operador   	           Descrição
+    typeof	                 retorna o tipo de uma variável
+    instanceof	             retorna true se um objeto é uma instância de uma classe

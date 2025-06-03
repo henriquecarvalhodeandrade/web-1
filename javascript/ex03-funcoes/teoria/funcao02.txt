@@ -1,0 +1,7 @@
+Vimos que em JavaScript nós declaramos funções com a palavra reservada function, o nome da função e a lista de parâmetros. Nesta seção vamos conhecer um pouco mais sobre elas.
+
+Apesar de parecer apenas uma outra forma de se escrever uma função, existe uma grande diferença entre funções do JavaScript e de outras linguagens: funções são objetos, e podem ser passadas por parâmetros, para outras variáveis, retornadas por outras funções, assim como qualquer variável ou objeto. 
+
+Uma Expressão de Função ocorre quando você cria uma função e a atribui a uma variável, ou a usa em qualquer outro lugar onde uma expressão é esperada (por exemplo, como argumento para outra função, ou como o lado direito de uma atribuição).
+
+A principal característica é que a função é tratada como um valor.

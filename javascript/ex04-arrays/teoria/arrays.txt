@@ -1,0 +1,86 @@
+
+Arrays  são estruturas que permitem armazenar vários itens em uma única variável. O array é ordenável, alterável e permite valores duplicados. 
+
+Criando um array
+
+    Um array pode ser criado utilizando um nome de variável que recebe um conjunto de valores separados por vírgula e entre colchetes ( [  ] ). O array pode conter qualquer quantidade de itens e eles podem ser de diferentes tipos: int, float, string e etc. Observe no exemplo abaixo:
+
+        meu_array = [];
+
+        array_inteiros = [1,2,3];
+
+        multi_dados_array = [1,2,3,'a',"b",false, 2.5]
+
+    Um array pode conter outros arrays como itens. São chamados de arrays aninhados:
+
+        array_aninhado = [1,2,3, ["oi",1,2] ]
+
+
+Acessando itens de um array
+
+    Para acessar os itens de um array, utilizamos o índice, que é um valor inteiro, que geralmente inicia-se de 0. Então o primeiro item está no índice 0, o segundo está no índice 1, e assim por diante. Tentar acessar um índice que não existe irá causar um erro no programa. Além disso, os índices devem ser inteiros.
+
+    Exemplos:
+
+        array = [10, 100, 1000]
+        console.log(array[2])
+        // vai exibir -> 100
+
+Percorrendo arrays
+    Arrays podem ser percorridos usando estruturas de repetição como o while e o for:
+        
+        let meu_array = [2, 5.5, ["arroz", "macarrão"]];
+        let i = 0;
+
+        while(i < meu_array.length){
+            console.log(meu_array[i]);
+            i++;
+        }
+
+Alterando valores do array
+
+    Os valores de um array podem ser alterados através do operador de atribuição:
+
+        let meu_array = [2, 5.5, ["arroz", "macarrão"]];
+
+        // Modificando o primeiro elemento do array interno
+        meu_array[2][0] = "queijo";
+
+        // Verificando o array atualizado
+        console.log(meu_array);
+
+
+    Os métodos push/pop/shift/unshift
+
+            let meu_array = [2, 3, 4];   // Criação do array
+            console.log(meu_array);      // [2, 3, 4]
+
+
+        Para adicionar ao final do array, utilize o método push:
+
+            meu_array.push(5);           // Adiciona 5 no final do array
+            console.log(meu_array);      // [2, 3, 4, 5]
+
+
+        Para remover do final do array, basta usar o método pop:
+
+            let removido = meu_array.pop();  // Remove o último elemento (5) e armazena na variável
+            console.log(removido);       // 5
+            console.log(meu_array);      // [2, 3, 4]
+
+            let meu_array = [2, 3, 4];       // Criação do array original
+            console.log(meu_array);          // [2, 3, 4]
+
+
+        Para adicionar no início do array, utilize o método unshift:
+
+            meu_array.unshift(1);           // Adiciona 1 no início do array
+            console.log(meu_array);         // [1, 2, 3, 4]
+
+
+        Para remover do início, utilize o método shift:
+
+            let removido = meu_array.shift();  // Remove o primeiro elemento (1)
+            console.log(removido);          // 1
+            console.log(meu_array);         // [2, 3, 4]
+

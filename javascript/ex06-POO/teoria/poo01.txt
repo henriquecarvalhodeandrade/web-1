@@ -1,0 +1,25 @@
+A Programação Orientação a Objetos (POO) é um paradigma de programação que tem suas origens na área da cognição. Antes de entendermos a POO do ponto de vista da programação, vamos verificar seu conceito cognitivo.
+
+O que é Programação Orientada a Objetos?
+
+    A POO é um modelo de programação que organiza o software em torno de "objetos" em vez de "ações" e "lógica". Pense em como vemos o mundo real: ele é composto por vários objetos (carros, pessoas, casas, árvores), e cada objeto tem suas próprias características (dados) e comportamentos (o que ele pode fazer).
+
+
+Classe - Padrão para um conjunto de objetos com as mesmas características. 
+
+    Ex.: ventilador, cadeira, carro, mão, etc.
+
+
+Objetos - Exemplares ou instâncias de uma classe. 
+
+    Ex.: ventilador de teto, cadeira giratória, fusca, a mão de uma pessoa em específico, etc.
+
+
+Características (atributos) - Elementos que unem os diversos objetos de uma mesma classe. 
+
+    Ex.: todos os ventiladores têm uma quantidade de hélices, todas as cadeiras têm assento, todos os carros têm cor, todas as mãos têm uma quantidade de dedos.
+
+
+Ações (métodos) - Elementos ativos comuns aos diversos objetos de uma mesma classe. 
+
+    Ex.: ventiladores podem ser ligados ou desligados, todas as cadeiras podem ter sua posição alterada, todos os carros podem tentar alterar sua velocidade, todas as mãos podem empurrar.

@@ -1,0 +1,6 @@
+A seguir, uma lista de operadores lógicos:
+
+ Operador    	Descrição
+    &&	            e
+    ||          	ou
+    !	            negação

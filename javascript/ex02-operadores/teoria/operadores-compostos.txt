@@ -1,0 +1,39 @@
+A seguir são apresentados alguns operadores compostos de atribuição:
+
+    =  ->  x = y ou x = y
+
+
+    +=  ->  x += y ou x = x + y
+
+
+    -=  ->  x -= y ou x = x - y
+
+
+    *=  ->  x *= y ou x = x * y
+
+
+    /=  ->  x /= y ou x = x / y
+
+
+    %=  ->  x %= y ou x = x % y
+
+
+    <<=  ->  x <<= y ou x = x << y
+
+
+    >>=  ->  x >>= y ou x = x >> y
+
+
+    >>>=  ->  x >>>= y ou x = x >>> y
+
+
+    &=  ->  x &= y ou x = x & y
+
+
+    ^=  ->  x ^= y ou x = x ^ y
+
+
+    |=  ->  x |= y ou x = x | y
+
+
+    **=  ->  x **= y ou x = x ** y

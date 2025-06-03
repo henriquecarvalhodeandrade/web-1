@@ -1,0 +1,20 @@
+Os blocos de instruções, que podem serem chamados em qualquer parte do programa, são declarados com a palavra reservada function. 
+
+Funções em JavaScript podem receber parâmetros e retornar valores. Os parâmetros devem serem definidos entre parênteses e separados por vírgula. O bloco de código a ser executado deve estar entre chaves, como na sintaxe abaixo:
+
+    function nome_da_funcao(parametro1, parametro2, parametro3) {
+        { código a ser executado }
+    }
+
+A seguir, um exemplo de função que recebe um valor e converte esse valor da escala de Fahrenheit de temperatura, para Celsius:
+
+    function toCelsius(fahrenheit) {
+        return (5/9) * (fahrenheit-32)
+    }
+
+
+Uma função pode ser chamada nas situações:
+    - Quando um evento ocorre (quando um usuário clica em um botão)
+    - Quando é invocado/chamado em um código JavaScript
+    - Automaticamente (recursão)
+    

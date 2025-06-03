@@ -1,0 +1,71 @@
+Arrays em JavaScript possuem métodos muito úteis, que utilizam expressões de funções para sua execução.
+
+O que é uma Função de Callback neste Contexto?
+    
+    Uma função de callback (ou simplesmente "callback") é uma função que você passa como argumento para outra função (neste caso, um método de array). O método do array, então, "chama de volta" (executa) essa função que você forneceu, geralmente uma vez para cada elemento do array (ou conforme a lógica específica do método).
+
+A função de callback geralmente recebe informações sobre o elemento atual que está sendo processado, como:
+
+    - O elemento em si.
+    - O índice do elemento atual.
+    - O array original que está sendo percorrido.
+
+
+forEach()
+    Executa uma função de callback uma vez para cada elemento do array. Não retorna um novo array (retorna undefined). É usado principalmente para causar efeitos colaterais (como console.log ou modificar elementos de um objeto externo).
+
+map()
+    Cria um novo array com os resultados da chamada de uma função de callback para cada elemento do array. O array original não é modificado.
+
+    Callback Signature: function(elementoAtual, indice, arrayOriginal)
+    Retorno do Callback: O novo valor para o elemento correspondente no novo array.
+
+filter()
+    Cria um novo array com todos os elementos que passaram no teste implementado pela função de callback. O array original não é modificado.
+
+    Callback Signature: function(elementoAtual, indice, arrayOriginal)
+    Retorno do Callback: Um valor booleano (true para incluir o elemento, false para excluir).
+
+find()
+    Retorna o valor do primeiro elemento no array que satisfaz a função de teste fornecida no callback. Se nenhum elemento satisfizer o teste, undefined é retornado.
+
+    Callback Signature: function(elementoAtual, indice, arrayOriginal)
+    Retorno do Callback: Um valor booleano (true se o elemento for o desejado, false caso contrário).
+
+findIndex()
+    Retorna o índice do primeiro elemento no array que satisfaz a função de teste fornecida no callback. Se nenhum elemento satisfizer o teste, -1 é retornado.
+
+    Callback Signature: function(elementoAtual, indice, arrayOriginal)
+    Retorno do Callback: Um valor booleano (true se o elemento for o desejado, false caso contrário).
+
+some()
+    Testa se pelo menos um elemento no array passa no teste implementado pela função de callback. Retorna true ou false. Para de iterar assim que encontra um elemento que satisfaz a condição.
+
+    Callback Signature: function(elementoAtual, indice, arrayOriginal)
+    Retorno do Callback: Um valor booleano.
+
+every()
+    Testa se todos os elementos no array passam no teste implementado pela função de callback. Retorna true ou false. Para de iterar assim que encontra um elemento que não satisfaz a condição.
+
+    Callback Signature: function(elementoAtual, indice, arrayOriginal)
+    Retorno do Callback: Um valor booleano.
+
+reduce()
+    Executa uma função "redutora" (fornecida por você como callback) em cada elemento do array, resultando em um único valor de saída.
+
+    Callback Signature: function(acumulador, valorAtual, indiceAtual, arrayOriginal)
+    Parâmetros Adicionais do reduce(): valorInicial (opcional) para o acumulador.
+    Retorno do Callback: O valor atualizado do acumulador.
+
+sort() (com função de comparação)
+    O método sort() pode aceitar uma função de callback opcional para definir a lógica de ordenação, especialmente útil para números ou objetos.
+
+    Callback Signature: function(a, b)
+    Retorno do Callback:
+
+    Um número negativo se a deve vir antes de b.
+    Um número positivo se b deve vir antes de a.
+    Zero se a ordem de a e b não deve mudar em relação um ao outro.
+
+
+

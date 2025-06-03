@@ -1,0 +1,22 @@
+var:
+    Escopo: Global ou de função.
+    Redeclaração: Pode ser redeclarado no mesmo escopo.
+    Reatribuição: Pode ser reatribuído (ter seu valor alterado).
+    Hoisting: É "içado" (hoisted) para o topo do seu escopo e inicializado com undefined.
+
+###########
+
+let:
+    Escopo: De bloco ({}).
+    Redeclaração: Não pode ser redeclarado no mesmo escopo.
+    Reatribuição: Pode ser reatribuído.
+    Hoisting: É "içado", mas não inicializado (cria uma "Temporal Dead Zone" até a declaração).
+
+###########
+
+const:
+    Escopo: De bloco ({}).
+    Redeclaração: Não pode ser redeclarado no mesmo escopo.
+    Reatribuição: Não pode ser reatribuído. Deve ser inicializado na declaração.
+    Exceção: Para objetos e arrays, a referência é constante, mas o conteúdo interno (propriedades do objeto ou elementos do array) pode ser modificado.
+    Hoisting: É "içado", mas não inicializado (cria uma "Temporal Dead Zone" até a declaração).

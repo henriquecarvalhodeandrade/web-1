@@ -1,0 +1,12 @@
+A seguir, uma lista dos operadores relacionais em JavaScript:
+
+ Operador   	   Descrição
+    ==	              igual
+    ===	              valor e tipo iguais
+    !=	              não igual
+    !==	              nem o valor e nem o tipo são iguais
+    >	              maior que
+    <	              menor que
+    >=	              maior ou igual
+    <=	              menor ou igual
+    ?	              operador ternário

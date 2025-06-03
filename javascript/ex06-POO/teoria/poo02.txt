@@ -1,0 +1,6 @@
+Existem várias formas de se trabalhar com objetos em JavaScript. Para os propósitos deste curso, consideraremos a palavra reservada class.
+
+JavaScript tem um modelo de orientação a objetos um pouco diferente das linguagens clássicas como Java ou C++. Originalmente, JavaScript é baseado em protótipos (um objeto herda diretamente de outro objeto).
+
+No entanto, com a introdução do ECMAScript 2015 (ES6), a sintaxe de class foi adicionada, o que torna a escrita de código orientado a objetos em JavaScript mais familiar para quem vem de outras linguagens, embora por baixo dos panos ainda utilize o sistema de protótipos.
+
