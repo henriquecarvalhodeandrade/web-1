@@ -1,0 +1,39 @@
+JSON (JavaScript Object Notation) é um formato de dados leve e flexível, utilizado para armazenar e trocar informações entre sistemas. É um formato baseado em texto, fácil de ler e escrever para humanos, e fácil de analisar para máquinas. 
+
+Em resumo, o JSON é:
+    
+    Leve e Compacto:
+        Utiliza uma sintaxe simples, reduzindo o tamanho dos dados em comparação com formatos como XML. 
+    
+    Facilmente Legível:
+        Sua sintaxe é intuitiva e fácil de entender tanto para humanos quanto para sistemas. 
+    
+    Versátil:
+        Pode ser usado para representar diferentes tipos de dados, como strings, números, arrays, objetos e booleanos. 
+    
+    Independente de Linguagem:
+        Apesar do nome, o JSON não é específico para JavaScript e pode ser usado em diversas linguagens de programação e plataformas. 
+    
+    Amplamente Utilizado:
+        É um formato padrão para troca de dados na web, principalmente em aplicações que precisam de dados simples e rápidos. 
+
+
+ex:
+
+{
+  "nome": "João",
+  "idade": 30,
+  "cidade": "São Paulo",
+  "enderecos": [
+    {
+      "rua": "Avenida Paulista",
+      "numero": 1500
+    },
+    {
+      "rua": "Rua da Consolação",
+      "numero": 200
+    }
+  ],
+  "casado": false,
+  "hobbies": ["esportes", "música", "programação"]
+}

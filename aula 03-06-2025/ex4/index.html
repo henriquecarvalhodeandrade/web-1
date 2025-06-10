@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localizador de Endereço - CEP</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Localizador de Endereço a partir do CEP</h1>
+    <label for="cepInput">Digite o CEP:</label>
+    <input id="cepInput" type="text" placeholder="Ex: 01001000" maxlength="8">
+    <button id="buscarCep">Buscar Endereço</button>
+
+    <div class="resultado" id="resultadoEndereco">
+        <p><strong>Logradouro:</strong> <span id="logradouro"></span></p>
+        <p><strong>Bairro:</strong> <span id="bairro"></span></p>
+        <p><strong>Cidade:</strong> <span id="cidade"></span></p>
+        <p><strong>Estado:</strong> <span id="estado"></span></p>
+        <p id="mensagemErro" style="color: red;"></p>
+    </div>
+</body>
+</html>

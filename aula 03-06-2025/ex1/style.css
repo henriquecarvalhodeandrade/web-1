@@ -1,0 +1,93 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 350px; /* Ajuste a largura conforme necessário */
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-group input[type="number"] {
+    width: calc(100% - 22px); /* Ajusta para padding e borda */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.conversion-type {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: left;
+}
+
+.conversion-type legend {
+    padding: 0 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+.conversion-type div {
+    margin-bottom: 8px;
+}
+
+.conversion-type label {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+button#btnConverter {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button#btnConverter:hover {
+    background-color: #0056b3;
+}
+
+#resultadoArea {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    min-height: 20px; /* Para manter o espaço mesmo sem texto */
+}
+
+#resultadoTexto {
+    font-size: 1.1em;
+    font-weight: bold;
+}

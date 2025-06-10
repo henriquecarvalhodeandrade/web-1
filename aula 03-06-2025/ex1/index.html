@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+    <link rel="stylesheet" href="style.css"> </head>
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+<body>
+    <div class="container">
+        <h1>Conversor de Temperatura</h1>
+        <form id="tempConverterForm">
+            <div class="input-group">
+                <label for="temperatura">Temperatura:</label>
+                <input type="number" id="temperatura" name="temperatura" placeholder="Insira o valor da temperatura" required>
+            </div>
+
+            <fieldset class="conversion-type">
+                <legend>Converter de:</legend>
+                <div>
+                    <input type="radio" id="paraFahrenheit" name="tipoConversao" value="toFahrenheit">
+                    <label for="paraFahrenheit">Celsius para Fahrenheit</label>
+                </div>
+                <div>
+                    <input type="radio" id="paraCelsius" name="tipoConversao" value="toCelsius">
+                    <label for="paraCelsius">Fahrenheit para Celsius</label>
+                </div>
+            </fieldset>
+
+            <button type="button" id="btnConverter">Converter</button>
+        </form>
+
+        <div id="resultadoArea">
+            <p id="resultadoTexto"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

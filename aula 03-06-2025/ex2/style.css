@@ -1,0 +1,15 @@
+body {
+    margin: 0; /* Remove margens padrão para facilitar o posicionamento */
+    height: 100vh; /* Garante que o body ocupe toda a altura da viewport */
+    display: flex; /* Opcional: para centralizar o botão inicialmente, se desejar */
+    justify-content: center; /* Opcional: para centralizar o botão inicialmente */
+    align-items: center; /* Opcional: para centralizar o botão inicialmente */
+    overflow: hidden; /* Para evitar barras de rolagem se o botão sair da tela */
+}
+
+#meuBotao {
+    position: relative; /* Essencial para que top, left, right, bottom funcionem */
+    padding: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
