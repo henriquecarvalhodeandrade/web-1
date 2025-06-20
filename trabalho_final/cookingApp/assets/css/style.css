@@ -1,0 +1,27 @@
+/* Estilo para a imagem do carrossel */
+.carousel-image {
+    height: 60vh; /* Altura do carrossel */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+    filter: brightness(0.7); /* Escurece a imagem para o texto ficar mais legível */
+}
+
+/* Estilo para os cards de receita */
+.recipe-card {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Ajuste para textarea ter tamanho fixo */
+textarea {
+    resize: vertical;
+}
