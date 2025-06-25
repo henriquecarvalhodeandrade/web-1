@@ -1,22 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Verifica se estamos na página principal para carregar a grade de receitas
-    if (document.getElementById('recipe-grid')) {
-        loadAllRecipes();
+    
+    const recipeGrid = document.getElementById('recipe-grid');
+    if (recipeGrid) {
+        loadAllRecipes(); 
+        
+        const searchInput = document.getElementById('search-input');
+        const searchForm = document.getElementById('search-form');
+        
+        searchInput.addEventListener('keyup', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            loadAllRecipes(searchTerm);
+        });
+
+        searchForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+        });
     }
 });
 
-// Carrega todas as receitas na grade da página inicial
-function loadAllRecipes() {
-    const recipes = getRecipes();
+function loadAllRecipes(searchTerm = '') {
+    const allRecipes = getRecipes();
     const grid = document.getElementById('recipe-grid');
     grid.innerHTML = '';
 
-    if (recipes.length === 0) {
-        grid.innerHTML = '<p class="text-center col-12">Ainda não há receitas. Seja o primeiro a postar uma!</p>';
+    const filteredRecipes = allRecipes.filter(recipe => {
+        const titleMatch = recipe.title.toLowerCase().includes(searchTerm);
+        const ingredientsMatch = recipe.ingredients.toLowerCase().includes(searchTerm);
+        return titleMatch || ingredientsMatch;
+    });
+
+    if (filteredRecipes.length === 0) {
+        grid.innerHTML = `<p class="text-center col-12">Nenhuma receita encontrada para "<strong>${searchTerm}</strong>".</p>`;
         return;
     }
 
-    recipes.forEach(recipe => {
+    filteredRecipes.forEach(recipe => {
         const card = `
             <div class="col">
                 <div class="card recipe-card h-100" onclick="showRecipeDetails(${recipe.id})">
@@ -31,7 +49,6 @@ function loadAllRecipes() {
     });
 }
 
-// (Consulta 1) Mostra os detalhes de uma receita em um modal
 function showRecipeDetails(id) {
     const recipes = getRecipes();
     const recipe = recipes.find(r => r.id === id);
@@ -60,3 +77,4 @@ function showRecipeDetails(id) {
     const recipeModal = new bootstrap.Modal(document.getElementById('recipeModal'));
     recipeModal.show();
 }
+

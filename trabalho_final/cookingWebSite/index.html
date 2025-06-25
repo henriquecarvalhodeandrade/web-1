@@ -10,23 +10,42 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <!-- barra de navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-brown sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html"><i class="bi bi-egg-fried"></i> Cozinha Criativa</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item" id="nav-profile" style="display: none;"><a class="nav-link" href="profile.html">Minhas Receitas</a></li>
-                    <li class="nav-item" id="nav-login"><a class="nav-link" href="login.html">Login</a></li>
-                    <li class="nav-item" id="nav-logout" style="display: none;"><a class="nav-link" href="#" id="logout-link">Sair</a></li>
-                </ul>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    </ul>
+
+                <div class="d-flex align-items-center">
+                    <form class="d-flex" role="search" id="search-form">
+                        <input class="form-control me-2" type="search" placeholder="Buscar receitas..." aria-label="Search" id="search-input">
+                    </form>
+
+                    <ul class="navbar-nav flex-row">
+                        <li class="nav-item" id="nav-login">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                    </ul>
+
+                    <a href="profile.html" class="nav-link ms-3" id="nav-profile-icon" style="display: none;" title="Meu Perfil">
+                        <i class="bi bi-person-circle fs-4 text-white"></i>
+                    </a>
+
+                    <a href="#" class="nav-link ms-3" id="logout-link" style="display: none;" title="Sair">
+                        <i class="bi bi-box-arrow-right fs-4 text-white"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
 
+    <!-- carrossel de imagens -->
     <header>
         <div id="mainCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -66,12 +85,14 @@
         </div>
     </header>
 
+    <!-- seção de receitas -->
     <main class="container">
         <h2 class="mb-4 text-center">Receitas da Comunidade</h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="recipe-grid">
             </div>
     </main>
 
+    <!-- card das receitas -->
     <div class="modal fade" id="recipeModal" tabindex="-1">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
@@ -79,14 +100,13 @@
                     <h5 class="modal-title" id="recipeModalTitle"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
-                <div class="modal-body" id="recipeModalBody">
-                    </div>
+                <div class="modal-body" id="recipeModalBody"></div>
             </div>
         </div>
     </div>
     
     <footer class="bg-dark text-white text-center p-3 mt-5">
-        <p>&copy; 2025 Cozinha Criativa. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Cozinha Criativa.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

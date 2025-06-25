@@ -1,11 +1,15 @@
-/* Estilo para a imagem do carrossel */
-.carousel-image {
-    height: 60vh; /* Altura do carrossel */
-    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
-    filter: brightness(0.7); /* Escurece a imagem para o texto ficar mais legível */
+
+.navbar-brown {
+    background-color: #6f4e37; /* Um tom de marrom café (Coffee Brown) */
 }
 
-/* Estilo para os cards de receita */
+
+.carousel-image {
+    height: 55vh; 
+    object-fit: cover; 
+    filter: brightness(0.6);
+}
+
 .recipe-card {
     cursor: pointer;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -21,7 +25,6 @@
     object-fit: cover;
 }
 
-/* Ajuste para textarea ter tamanho fixo */
 textarea {
     resize: vertical;
 }

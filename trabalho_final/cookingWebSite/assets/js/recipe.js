@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Verifica se estamos na página de perfil para executar as funções
     if (window.location.pathname.endsWith('profile.html')) {
         const user = getLoggedInUser();
+
         if (!user) {
-            window.location.href = 'login.html'; // Protege a página
+            window.location.href = 'login.html'; 
             return;
         }
 
-        loadMyRecipes(); // Carrega as receitas do usuário na grade
+        loadMyRecipes(); 
 
         const recipeForm = document.getElementById('recipe-form');
         recipeForm.addEventListener('submit', handleSaveRecipe);
@@ -20,10 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-let recipeToDeleteId = null; // Variável global para guardar o ID da receita a ser deletada
+let recipeToDeleteId = null; 
 const myRecipesModal = new bootstrap.Modal(document.getElementById('deleteRecipeModal'));
 
-// (Consulta 2) Carrega as receitas do usuário logado na grade do perfil
 function loadMyRecipes() {
     const user = getLoggedInUser();
     const allRecipes = getRecipes();
@@ -57,12 +56,10 @@ function loadMyRecipes() {
     });
 }
 
-// (Cadastro 2 / Edição 2) Lida com o salvamento (criação ou atualização) da receita
 function handleSaveRecipe(event) {
     event.preventDefault();
-    const user = getLoggedInUser();
 
-    // Pega os valores do formulário
+    const user = getLoggedInUser();
     const recipeId = document.getElementById('recipeId').value;
     const title = document.getElementById('recipeTitle').value;
     const imageUrl = document.getElementById('recipeImageUrl').value;
@@ -72,12 +69,14 @@ function handleSaveRecipe(event) {
     
     let recipes = getRecipes();
 
-    if (recipeId) { // Se tem ID, estamos editando
+    if (recipeId) { 
         const recipeIndex = recipes.findIndex(r => r.id == recipeId);
+
         if (recipeIndex !== -1) {
             recipes[recipeIndex] = { ...recipes[recipeIndex], title, imageUrl, prepTime, ingredients, instructions };
         }
-    } else { // Senão, estamos criando uma nova
+
+    } else { 
         const newRecipe = {
             id: Date.now(),
             userId: user.id,
@@ -87,17 +86,16 @@ function handleSaveRecipe(event) {
             ingredients,
             instructions
         };
+        
         recipes.push(newRecipe);
     }
 
     saveRecipes(recipes);
     alert('Receita salva com sucesso!');
-    
-    cancelEdit(); // Reseta o formulário
-    loadMyRecipes(); // Recarrega a lista de receitas
+    cancelEdit(); 
+    loadMyRecipes(); 
 }
 
-// (Edição 2) Prepara o formulário para editar uma receita existente
 function editRecipe(id) {
     const recipes = getRecipes();
     const recipe = recipes.find(r => r.id === id);
@@ -110,14 +108,12 @@ function editRecipe(id) {
         document.getElementById('recipePrepTime').value = recipe.prepTime;
         document.getElementById('recipeIngredients').value = recipe.ingredients;
         document.getElementById('recipeInstructions').value = recipe.instructions;
-
         document.getElementById('save-recipe-btn').innerText = "Salvar Alterações";
         document.getElementById('cancel-edit-btn').style.display = 'inline-block';
-        window.scrollTo(0, 0); // Rola a página para o topo para ver o formulário
+        window.scrollTo(0, 0);
     }
 }
 
-// Cancela o modo de edição, limpando o formulário
 function cancelEdit() {
     document.getElementById('recipe-form-title').innerText = "Adicionar Nova Receita";
     document.getElementById('recipe-form').reset();
@@ -126,22 +122,21 @@ function cancelEdit() {
     document.getElementById('cancel-edit-btn').style.display = 'none';
 }
 
-
-// (Exclusão 1.1) Prepara a exclusão, guardando o ID e abrindo o modal
 function prepareDeleteRecipe(id) {
     recipeToDeleteId = id;
     myRecipesModal.show();
 }
 
-// (Exclusão 1.2) Confirma e executa a exclusão da receita
 function confirmDeleteRecipe() {
     if (recipeToDeleteId) {
         let recipes = getRecipes();
+
         const updatedRecipes = recipes.filter(r => r.id !== recipeToDeleteId);
+
         saveRecipes(updatedRecipes);
-        
-        myRecipesModal.hide(); // Fecha o modal
-        loadMyRecipes(); // Atualiza a lista
-        recipeToDeleteId = null; // Limpa a variável
+        myRecipesModal.hide(); 
+        loadMyRecipes(); 
+        recipeToDeleteId = null; 
     }
 }
+
